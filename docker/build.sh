@@ -10,7 +10,7 @@ if [ $# -gt 1 ]; then
   target_env=$2
 fi
 
-# files must be in a folder or subfolder
+#  files must be in a folder or subfolder
 rm -rf target
 mkdir -p target
 cp ../target/*.jar target
@@ -19,3 +19,4 @@ docker \
   build -t $tag \
   --build-arg TARGET_ENV=$target_env \
   .
+
