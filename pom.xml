@@ -10,8 +10,8 @@
     <groupId>org.hspconsortium</groupId>
     <artifactId>hspc-sandbox-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sandboxgateway</name>
-    <description>sandbox gateway</description>
+    <name>Sandbox Gateway</name>
+    <description>Sandbox Gateway</description>
 
     <properties>
         <java.version>1.8</java.version>
