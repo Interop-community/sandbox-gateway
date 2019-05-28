@@ -23,8 +23,6 @@ public class RouteConfig {
                         .path("/**")
                         .filters(f -> f.filter(new FhirEndpointResolutionFilter().apply(new FhirEndpointResolutionFilter.Config(fhirEndpointResolutionService)))
                                 .removeRequestHeader("accept-encoding")
-                                .removeRequestHeader("accept")
-                                .addRequestHeader("accept", "application/json")
                                 .modifyResponseBody(String.class, String.class, MediaType.TEXT_PLAIN_VALUE,
                                         (exchange, bundle) -> {
                                             bundle = bundle.replaceAll("http://localhost:12100", "googoo");
