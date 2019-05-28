@@ -1,7 +1,5 @@
 package org.hspconsortium.sandboxgateway.config;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import org.hl7.fhir.instance.model.Bundle;
 import org.hspconsortium.sandboxgateway.filter.FhirEndpointResolutionFilter;
 import org.hspconsortium.sandboxgateway.service.FhirEndpointResolutionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +9,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import reactor.core.publisher.Mono;
-
-import java.util.Map;
 
 @Configuration
 public class RouteConfig {
