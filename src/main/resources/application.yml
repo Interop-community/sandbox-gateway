@@ -41,3 +41,5 @@ api_endpoint_index:
     apiBaseURL_dstu2: http://${API_DSTU2_HOST:localhost}:${API_DSTU2_PORT:8078}
     apiBaseURL_stu3: http://${API_STU3_HOST:localhost}:${API_STU3_PORT:8079}
     apiBaseURL_r4: http://${API_R4_HOST:localhost}:${API_R4_PORT:8070}
+
+api_url: http://localhost:12100

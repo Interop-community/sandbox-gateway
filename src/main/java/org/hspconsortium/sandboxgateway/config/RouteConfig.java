@@ -25,7 +25,9 @@ public class RouteConfig {
                                 .removeRequestHeader("accept-encoding")
                                 .modifyResponseBody(String.class, String.class, MediaType.TEXT_PLAIN_VALUE,
                                         (exchange, bundle) -> {
-                                            bundle = bundle.replaceAll("http://localhost:12100", "googoo");
+                                            String path = exchange.getRequest().getPath().toString();
+                                            String sandboxId = path.substring(path.indexOf("/") + 1, path.indexOf("/", path.indexOf("/") + 1));
+                                            bundle = bundle.replaceAll(fhirEndpointResolutionService.getHost(sandboxId), fhirEndpointResolutionService.getApiUrl());
                                             return Mono.just(bundle);
                                         }))
                         .uri("http://httpbin.org:80"))
