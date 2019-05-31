@@ -12,7 +12,8 @@ public class WebConfig implements WebFluxConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedMethods("*")
-                .allowedOrigins("*");
+                .allowedMethods("GET", "PUT", "POST", "DELETE", "OPTIONS")
+                .allowedOrigins("*")
+                .allowedHeaders("X-FHIR-Starter", "authorization", "Prefer", "Origin", "Accept", "X-Requested-With", "Content-Type", "Access-Control-Request-Method", "Access-Control-Request-Headers");
     }
 }
