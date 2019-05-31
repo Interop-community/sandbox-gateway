@@ -4,12 +4,12 @@ server:
     remote_ip_header: x-forwarded-for
     protocol_header: x-forwarded-proto
 spring:
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
+#  cloud:
+#    gateway:
+#      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
   datasource:
     base_url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}
     my_schema: ${DB_NAME:sandman}
