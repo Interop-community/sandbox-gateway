@@ -16,13 +16,13 @@ import java.util.Arrays;
 @EnableWebFlux
 public class CorsConfig implements WebFluxConfigurer {
 
-    @Override
-    public void addCorsMappings(CorsRegistry corsRegistry) {
-        corsRegistry.addMapping("/**")
-                .allowedOrigins("*")
-                .allowedMethods("*")
-                .maxAge(3600);
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry corsRegistry) {
+//        corsRegistry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("*")
+//                .maxAge(3600);
+//    }
 
     @Bean
     CorsWebFilter corsWebFilter() {
