@@ -1,56 +1,70 @@
-package org.hspconsortium.sandboxgateway.config;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.reactive.CorsWebFilter;
-import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
-import org.springframework.web.reactive.config.CorsRegistry;
-import org.springframework.web.reactive.config.EnableWebFlux;
-import org.springframework.web.reactive.config.WebFluxConfigurer;
-
-import java.util.Arrays;
-
-
-@Configuration
-@EnableWebFlux
-public class CorsConfig implements WebFluxConfigurer {
+//package org.hspconsortium.sandboxgateway.config;
+//
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.web.cors.CorsConfiguration;
+//import org.springframework.web.cors.reactive.CorsWebFilter;
+//import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+//import org.springframework.web.reactive.config.CorsRegistry;
+//import org.springframework.web.reactive.config.EnableWebFlux;
+//import org.springframework.web.reactive.config.WebFluxConfigurer;
+//
+//import java.util.Arrays;
+//
+//
+//@Configuration
+//@EnableWebFlux
+//public class CorsConfig implements WebFluxConfigurer {
 
 //    @Override
 //    public void addCorsMappings(CorsRegistry corsRegistry) {
 //        corsRegistry.addMapping("/**")
 //                .allowedOrigins("*")
 //                .allowedMethods("*")
+//                .allowCredentials(true)
+////                .exposedHeaders("Access-Control-Allow-Origin",
+////                        "Access-Control-Allow-Methods",
+////                        "Access-Control-Allow-Headers",
+////                        "Access-Control-Max-Age",
+////                        "Access-Control-Request-Headers",
+////                        "Access-Control-Request-Method")
 //                .maxAge(3600);
 //    }
 
-    @Bean
-    CorsWebFilter corsWebFilter() {
-        CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.setAllowedOrigins(Arrays.asList("*"));
-        corsConfig.setMaxAge(8000L);
-        corsConfig.addAllowedMethod("*");
-        corsConfig.addAllowedHeader("*");
+//    @Bean
+//    CorsWebFilter corsWebFilter() {
+//        CorsConfiguration corsConfig = new CorsConfiguration();
+//        corsConfig.setAllowCredentials(true);
+//        corsConfig.addAllowedOrigin("*");
+//        corsConfig.addAllowedHeader("*");
+//        corsConfig.addAllowedMethod("*");
+//        corsConfig.setMaxAge(8000L);
+//
+////        corsConfig.setAllowedOrigins(Arrays.asList("*"));
+////        corsConfig.setMaxAge(8000L);
+////        corsConfig.addAllowedMethod("*");
+////        corsConfig.addAllowedHeader("*");
+////        corsConfig.setAllowCredentials(true);
+//
+//        UrlBasedCorsConfigurationSource source =
+//                new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", corsConfig);
+//
+//        return new CorsWebFilter(source);
+//    }
+//}
+//
+//
 
-        UrlBasedCorsConfigurationSource source =
-                new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", corsConfig);
 
-        return new CorsWebFilter(source);
-    }
-}
-
-
-
-
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.http.HttpHeaders;
+//        import org.springframework.context.annotation.Bean;
+//        import org.springframework.http.HttpHeaders;
 //        import org.springframework.http.HttpMethod;
 //        import org.springframework.http.HttpStatus;
 //        import org.springframework.http.server.reactive.ServerHttpRequest;
 //        import org.springframework.http.server.reactive.ServerHttpResponse;
 //        import org.springframework.web.cors.reactive.CorsUtils;
-//import org.springframework.web.server.ServerWebExchange;
+//        import org.springframework.web.server.ServerWebExchange;
 //        import org.springframework.web.server.WebFilter;
 //        import org.springframework.web.server.WebFilterChain;
 //
@@ -94,7 +108,7 @@ public class CorsConfig implements WebFluxConfigurer {
 //    private static final String ALLOWED_ORIGIN = "*";
 //    private static final long MAX_AGE = 3600;
 
-//        ALLOWED_METHODS.add(HttpMethod.GET);
+//                ALLOWED_METHODS.add(HttpMethod.GET);
 //                ALLOWED_METHODS.add(HttpMethod.PUT);
 //                ALLOWED_METHODS.add(HttpMethod.POST);
 //                ALLOWED_METHODS.add(HttpMethod.DELETE);
@@ -111,6 +125,8 @@ public class CorsConfig implements WebFluxConfigurer {
 //                ALLOWED_HEADERS.add("Access-Control-Request-Method");
 //                ALLOWED_HEADERS.add("Access-Control-Request-Headers");
 //
+//          @Bean
+//          public WebFilter corsFilter() {
 //                return (ServerWebExchange ctx, WebFilterChain chain) -> {
 //                ServerHttpRequest request = ctx.getRequest();
 //                if (CorsUtils.isCorsRequest(request)) {
