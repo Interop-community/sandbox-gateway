@@ -6,11 +6,12 @@ server:
 spring:
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
+      enabled: false
+  #      globalcors:
+#        corsConfigurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods: "*"
   datasource:
     base_url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}
     my_schema: ${DB_NAME:sandman}
