@@ -13,4 +13,4 @@ api_endpoint_index:
     apiBaseURL_stu3: https://api-v8-stu3-test.logicahealth.org
     apiBaseURL_r4: https://api-v8-r4-test.logicahealth.org
 
-api_url: http://api-test.logicahealth.org
+api_url: https://api-test.logicahealth.org

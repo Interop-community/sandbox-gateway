@@ -30,7 +30,7 @@ public class RouteConfig {
                                             bundle = bundle.replaceAll(fhirEndpointResolutionService.getHost(sandboxId), fhirEndpointResolutionService.getApiUrl());
                                             return Mono.just(bundle);
                                         }))
-                        .uri("http://httpbin.org:80"))
+                        .uri(fhirEndpointResolutionService.getApiUrl()))
                 .build();
     }
 }
