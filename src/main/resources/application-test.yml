@@ -5,12 +5,12 @@ spring:
     password: ENC(rHDEF2U5A5X9o/Jca3P9CkRvYKs1mSTP)
 api_endpoint_index:
   prev:
-    apiBaseURL_dstu2: https://api-v5-dstu2-test.logicahealth.org
-    apiBaseURL_stu3: https://api-v5-stu3-test.logicahealth.org
-    apiBaseURL_r4: https://api-v5-r4-test.logicahealth.org
+    apiBaseURL_dstu2: https://api-v5-dstu2-test.hspconsortium.org
+    apiBaseURL_stu3: https://api-v5-stu3-test.hspconsortium.org
+    apiBaseURL_r4: https://api-v5-r4-test.hspconsortium.org
   current:
-    apiBaseURL_dstu2: https://api-v8-dstu2-test.logicahealth.org
-    apiBaseURL_stu3: https://api-v8-stu3-test.logicahealth.org
-    apiBaseURL_r4: https://api-v8-r4-test.logicahealth.org
+    apiBaseURL_dstu2: https://api-v8-dstu2-test.hspconsortium.org
+    apiBaseURL_stu3: https://api-v8-stu3-test.hspconsortium.org
+    apiBaseURL_r4: https://api-v8-r4-test.hspconsortium.org
 
 api_url: https://api-test.logicahealth.org
