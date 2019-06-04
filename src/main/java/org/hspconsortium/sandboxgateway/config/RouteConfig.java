@@ -30,7 +30,7 @@ public class RouteConfig {
                                             bundle = bundle.replaceAll(fhirEndpointResolutionService.getHost(sandboxId), fhirEndpointResolutionService.getApiUrl());
                                             return Mono.just(bundle);
                                         }))
-                        .uri(fhirEndpointResolutionService.getApiUrl()))
+                        .uri("http://www.example.com/thisUrlShouldNeverBeHit"))
                 .build();
     }
 }
