@@ -22,8 +22,8 @@ public class FhirEndpointResolutionFilter extends AbstractGatewayFilterFactory<F
         return (exchange, chain) -> {
             String path = exchange.getRequest().getPath().toString();
             String sandboxId = path.substring(path.indexOf("/") + 1, path.indexOf("/", path.indexOf("/") + 1));
-            String host = config.getFhirEndpointResolutionService().getHost(sandboxId);
-            updateRouteUri(exchange, host);
+            String newUri = config.getFhirEndpointResolutionService().getHost(sandboxId);
+            updateRouteUri(exchange, newUri);
             return chain.filter(exchange);
         };
     }

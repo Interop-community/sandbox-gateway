@@ -1,4 +1,12 @@
+server:
+  port: 12100
+  tomcat:
+    remote_ip_header: x-forwarded-for
+    protocol_header: x-forwarded-proto
 spring:
+  cloud:
+    gateway:
+      enabled: false
   datasource:
     base_url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}
     my_schema: ${DB_NAME:sandman}
@@ -17,6 +25,9 @@ spring:
       ddl-auto: validate
       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
       naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndTripleDES
 api_endpoint_index:
   prev:
     dstu2: 5
@@ -32,3 +43,5 @@ api_endpoint_index:
     apiBaseURL_dstu2: http://${API_DSTU2_HOST:localhost}:${API_DSTU2_PORT:8078}
     apiBaseURL_stu3: http://${API_STU3_HOST:localhost}:${API_STU3_PORT:8079}
     apiBaseURL_r4: http://${API_R4_HOST:localhost}:${API_R4_PORT:8070}
+
+api_url: http://localhost:12100

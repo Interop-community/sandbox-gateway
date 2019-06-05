@@ -4,10 +4,14 @@ import org.hspconsortium.sandboxgateway.model.ApiEndpointIndex;
 import org.hspconsortium.sandboxgateway.model.Sandbox;
 import org.hspconsortium.sandboxgateway.repository.FhirEndpointResolutionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FhirEndpointResolutionServiceImpl implements FhirEndpointResolutionService {
+
+    @Value("${api_url}")
+    private String apiUrl;
 
     @Autowired
     private FhirEndpointResolutionRepository repository;
@@ -15,6 +19,7 @@ public class FhirEndpointResolutionServiceImpl implements FhirEndpointResolution
     @Autowired
     private ApiEndpointIndex apiEndpointIndexObj;
 
+    @Override
     public String getHost(String sandboxId) {
         Sandbox sandbox = repository.findDistinctBySandboxId(sandboxId);
         return getApiSchemaURL(sandbox.getApiEndpointIndex());
@@ -41,5 +46,10 @@ public class FhirEndpointResolutionServiceImpl implements FhirEndpointResolution
             return apiEndpointIndexObj.getCurrent().getApiBaseURL_r4();
         }
         return "";
+    }
+
+    @Override
+    public String getApiUrl() {
+        return apiUrl;
     }
 }

@@ -1,0 +1,37 @@
+{
+  "family": "sandbox-gateway-test",
+  "containerDefinitions": [
+    {
+      "name": "sandbox-gateway-test",
+      "image": "hspconsortium/sandbox-gateway:0.8.2",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "containerPort": 12100,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ],
+      "memoryReservation": 400,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/sandbox-gateway-test",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "essential": true,
+      "environment": [
+        {
+          "name": "JASYPT_ENCRYPTOR_PASSWORD",
+          "value": ""
+        },
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "test"
+        }
+      ]
+    }
+  ]
+}
