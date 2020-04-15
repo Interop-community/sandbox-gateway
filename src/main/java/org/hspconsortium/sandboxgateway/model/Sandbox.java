@@ -1,7 +1,5 @@
 package org.hspconsortium.sandboxgateway.model;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
