@@ -2,7 +2,7 @@ spring:
   datasource:
     base_url: jdbc:mysql://sandboxdb-test.hspconsortium.org:3306
     username: system
-    password: ENC(eTe28H24x7ir3WTFLKeYurHJHMn3NeRb)
+    password: ENC(mwj/QyUXCSxC7DFgZAgnQCspZVijPOrj)
 #    username: sandman_api
 #    password: ENC(rHDEF2U5A5X9o/Jca3P9CkRvYKs1mSTP)
 api_endpoint_index:
