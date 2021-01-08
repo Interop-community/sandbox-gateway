@@ -45,6 +45,9 @@ public class FhirEndpointResolutionServiceImpl implements FhirEndpointResolution
         if(apiEndpointIndex.equals(apiEndpointIndexObj.getCurrent().getR4())) {
             return apiEndpointIndexObj.getCurrent().getApiBaseURL_r4();
         }
+        if(apiEndpointIndex.equals(apiEndpointIndexObj.getCurrent().getR5())) {
+            return apiEndpointIndexObj.getCurrent().getApiBaseURL_r5();
+        }
         return "";
     }
 
