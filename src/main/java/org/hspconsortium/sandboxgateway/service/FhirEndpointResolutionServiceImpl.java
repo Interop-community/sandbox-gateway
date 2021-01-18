@@ -28,7 +28,6 @@ public class FhirEndpointResolutionServiceImpl implements FhirEndpointResolution
     }
 
     private String getApiSchemaURL(final String apiEndpointIndex) {
-        System.out.println(this.apiEndpointIndexObj == null ? "apiEndpointIndex is null" : "apiEndpointIndex not null");
         if(apiEndpointIndex.equals(apiEndpointIndexObj.getPrev().getDstu2())) {
             return apiEndpointIndexObj.getPrev().getApiBaseURL_dstu2();
         }

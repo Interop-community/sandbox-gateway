@@ -30,8 +30,6 @@ public class RouteConfig {
                                             }
                                             String path = exchange.getRequest().getPath().toString();
                                             String sandboxId = path.substring(path.indexOf("/") + 1, path.indexOf("/", path.indexOf("/") + 1));
-                                            System.out.println(bundle == null ? "bundle is null" : "bundle is not null");
-                                            System.out.println(sandboxId == null ? "sandboxId is null" : "sandboxId is " + sandboxId);
                                             bundle = bundle.replaceAll(fhirEndpointResolutionService.getHost(sandboxId), fhirEndpointResolutionService.getApiUrl());
                                             return Mono.just(bundle);
                                         }))
