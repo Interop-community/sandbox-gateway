@@ -9,7 +9,7 @@ Welcome to the Logica Sandbox Gateway!
 [Logica Sandbox](https://sandbox.logicahealth.org)
 
 ### How do I get set up?
-This project uses Java 8. Please make sure that your Project SDK is set to use Java 8.
+This project uses Java 11. Please make sure that your Project SDK is set to use Java 11.
 
 #### Step 1: Maven Build
 
