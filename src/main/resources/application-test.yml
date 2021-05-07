@@ -1,20 +1,20 @@
 spring:
   datasource:
-    base_url: jdbc:mysql://sandboxdb-test.logicahealth.org:3306
+    base_url: jdbc:mysql://sandboxdb-test.interop.community:3306
     username: system
     password: ENC(mwj/QyUXCSxC7DFgZAgnQCspZVijPOrj)
 #    username: sandman_api
 #    password: ENC(rHDEF2U5A5X9o/Jca3P9CkRvYKs1mSTP)
 api_endpoint_index:
   prev:
-    apiBaseURL_dstu2: https://api-v5-dstu2-test.logicahealth.org
-    apiBaseURL_stu3: https://api-v5-stu3-test.logicahealth.org
-    apiBaseURL_r4: https://api-v5-r4-test.logicahealth.org
+    apiBaseURL_dstu2: https://api-v5-dstu2-test.interop.community
+    apiBaseURL_stu3: https://api-v5-stu3-test.interop.community
+    apiBaseURL_r4: https://api-v5-r4-test.interop.community
     apiBaseURL_r5:
   current:
-    apiBaseURL_dstu2: https://api-v8-dstu2-test.logicahealth.org
-    apiBaseURL_stu3: https://api-v8-stu3-test.logicahealth.org
-    apiBaseURL_r4: https://api-v8-r4-test.logicahealth.org
-    apiBaseURL_r5: https://api-v8-r5-test.logicahealth.org
+    apiBaseURL_dstu2: https://api-v8-dstu2-test.interop.community
+    apiBaseURL_stu3: https://api-v8-stu3-test.interop.community
+    apiBaseURL_r4: https://api-v8-r4-test.interop.community
+    apiBaseURL_r5: https://api-v8-r5-test.interop.community
 
-api_url: https://api-test.logicahealth.org
+api_url: https://api-test.interop.community

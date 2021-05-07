@@ -6,7 +6,7 @@ Welcome to the Logica Sandbox Gateway!
 
 *Note:* If you are wanting to build and test SMART on FHIR Apps, it is recommended that you use the free cloud-hosted version of the HSPC Sandbox.
 
-[Logica Sandbox](https://sandbox.logicahealth.org)
+[Interop Community Sandbox](https://sandbox.interop.community)
 
 ### How do I get set up?
 This project uses Java 11. Please make sure that your Project SDK is set to use Java 11.
